@@ -22,15 +22,15 @@ public class SoftUniParking {
                 case "unregister":
                     if (isRegistered) {
                         plateNumbersByUsers.remove(data.get(1));
-                        System.out.printf("%s unregistered successfully\n",data.get(1));
+                        System.out.printf("%s unregistered successfully\n", data.get(1));
                     } else {
                         System.out.printf("ERROR: user %s not found\n", data.get(1));
                     }
                     break;
             }
         }
-        for (Map.Entry<String,String> entry: plateNumbersByUsers.entrySet()){
-            System.out.println(entry.getKey()+" => "+entry.getValue());
+        for (Map.Entry<String, String> entry : plateNumbersByUsers.entrySet()) {
+            System.out.println(entry.getKey() + " => " + entry.getValue());
         }
     }
 }
